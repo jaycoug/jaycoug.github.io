@@ -1,2 +1,3 @@
 # jaycoug.github.io
-Impressions of a humble traveler's adventures through math, statistics, chemistry, computer science, bioinformatics, biology, and life.
+
+This contents of this directory comprise a personal website on which to feature outcomes of personal projects and display skills in and levels of understanding of statistics, biostatistics, biology, chemistry, computer science, and mathematics.
