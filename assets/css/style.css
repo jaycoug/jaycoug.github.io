@@ -1,0 +1,21 @@
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+
+/* Page wrapper — centers content, full-width on mobile */
+.page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Responsive type scale */
+html { font-size: 16px; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+h2 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
+
+/* Nav baseline — horizontal on wide, collapsible on narrow */
+nav { display: flex; gap: 1.5rem; }
+@media (max-width: 640px) {
+  nav { flex-direction: column; }
+}
