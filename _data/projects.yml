@@ -1,0 +1,41 @@
+- id: kybrfss-dashboard
+  title: KYBRFSS Dashboard App
+  domain: Public Health
+  tech: [R, Shiny]
+  question: "How do health risk factor prevalence rates vary across Kentucky communities, and which populations carry the highest chronic disease burden?"
+  data: "Kentucky BRFSS — statewide population survey covering chronic disease indicators, health behaviors, preventive care access, and demographic variables, 2017–2024; state-level supplement to the CDC's national BRFSS program. Produced in collaboration with KDPH."
+  data_prep: "Survey-weighted prevalence estimates computed by indicator, geography, and demographic subgroup via the survey package's svyciprop; individual-level records are not exposed."
+  methods: "R Shiny (page_navbar, Bootstrap 5 via bslib); category- and search-based indicator picker; automatic stratification by sex, age group, and income with stratified ggplot2 bar charts; multi-year trend lines; PDF report export (table, plots, and branded header); mobile-responsive layout with a floating action button; dark/light mode toggle; Monday.com contact form via GraphQL; a preview USA-vs-Kentucky comparison tab (hardcoded 2023 values for now)."
+  findings: "Live — see dashboard. Public link pending commissioner approval; the URL below is a placeholder until then."
+  limitation: "Population-level survey data; estimates carry sampling error, particularly for small geographic or demographic subgroups. No individual-level data is accessible or displayed. The USA-vs-Kentucky comparison tab is a hardcoded preview, not yet dynamic."
+  links:
+    - label: Dashboard
+      url: "http://kybrfss.temp.com"
+
+- id: walmart-m5-forecasting
+  title: Walmart M5 Forecasting
+  domain: Operations & Forecasting
+  tech: [Python]
+  question: "How accurately can a global model forecast 28-day unit demand across Walmart's 42,840 item-store time series, and what would forecast error cost in overstock and stockout terms?"
+  data: "M5 Forecasting Competition dataset (Kaggle) — hierarchical daily unit-sales records for Walmart stores across California, Texas, and Wisconsin, with calendar events and sell prices; one of the most realistic public retail-forecasting benchmarks, with most series intermittent (long stretches of zero-demand days). Downloaded separately via Kaggle, not committed to the repo."
+  data_prep: "In progress: initial exploratory data profiling (notebooks/01_data_profile.ipynb) is the only step built so far. The planned wide-to-long melt, calendar/price joins, and Parquet conversion haven't been implemented yet."
+  methods: "Planned approach, not yet built: naive and seasonal-naive baselines → Ridge regression → LightGBM global model; WRMSSE evaluation; SHAP interpretability; a newsvendor-style inventory simulation comparing baseline vs. ML-assisted vs. quantile-optimal ordering policies; results intended for a Power BI dashboard. Current progress is limited to the data-profiling notebook above."
+  findings: "Pending — project just started; data profiling in progress, no modeling yet."
+  limitation: "M5 is a public competition dataset, not live Walmart operational data, so any eventual inventory-cost figures will use assumed cost ratios, not real margins. Project is early-stage."
+  links:
+    - label: GitHub
+      url: "https://github.com/jaycoug/walmart-forecasting"
+
+- id: uslc-analytics
+  title: USL Championship Analytics
+  domain: Statistical Modeling
+  tech: [R]
+  question: "Can rolling team performance metrics — xG, expected passing, and goals added — reliably forecast USL Championship match outcomes before kickoff?"
+  data: "American Soccer Analysis (ASA) API via the itscalledsoccer R package — match, team, and player-level expected goals, expected passing, and goals added for USL Championship, alongside traditional counting stats (shots, goals, key passes)."
+  data_prep: "Raw ASA pulls saved per-endpoint as Parquet in data/raw/asa/ (extract_asa.R); clean_teams.R and clean_players.R build two reference tables so far, dim_team and dim_player, in data/clean/. A coverage_validation.R diagnostic confirmed no meaningful data gaps across a full season. Match-level fact tables and lag-based rolling feature tables for modeling are planned next, not yet built."
+  methods: "Planned approach, not yet built: Elo-style baseline → multinomial logistic regression → gradient boosting, temporally backtested; delivery via an R Shiny app (league overview, team profiles, player profiles, match predictions, methodology page) plus a Tableau Public season-level viz. Current progress is limited to data extraction and cleaning."
+  findings: "Pending — extraction and cleaning pipeline complete; feature engineering, modeling, and the dashboard are the next build phase."
+  limitation: "ASA provides advanced metrics for a third-tier league; some raw counting stats (discrete fouls, attendance) aren't available through this source, and team-level goals added can only be reconstructed by summing player-level numbers (no direct per-match team split from the API). Project is early-stage."
+  links:
+    - label: GitHub
+      url: "https://github.com/jaycoug/uslc-analytics"
