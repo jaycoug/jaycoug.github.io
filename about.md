@@ -1,5 +1,20 @@
 ---
-title: About
+title: About Me
 layout: default
 ---
-About — content coming soon.
+
+I'm a statistician and data analyst pursuing an M.S. in Biostatistics at the University of Louisville, projected for December 2027. I came to the field after nine years as a Cryptologic Language Analyst in the U.S. Air Force, producing reports for teams and partners worldwide under tight deadlines and shifting priorities. Military experience left me with a lasting respect for precision, clear communication, and delivering something reliable under real constraints.
+
+After leaving the Air Force, I completed a B.S. in Applied Mathematics with a chemistry minor at Murray State University, where many undergraduate research opportunities helped me discover my ambition to become a professional statistician. Working with Dr. David Roach on a wavelet-based signal processing project, I helped find that certain wavelet parametrizations are capable of compressing DNA sequence data more effectively than standard alternatives. Through this research and other course projects, where I applied statistical techniques to Alzheimer's and hepatocellular carcinoma biomarker data, I found a passion for using mathematical and statistical methods to turn messy biological data into interpretable products. This trajectory led me to enroll at the University of Louisville for a M.S. in Biostatistics, a milestone I look forward to achieving at the end of 2027.
+
+In public health analytics, I co-developed the Kentucky BRFSS Dashboard under an internship with Dr. Adam Berrones at the Kentucky Department for Public Health. This publicly hosted R Shiny web application delivers survey-weighted prevalence estimates for key health indicators, and includes demographic stratification, multi-year trend lines, and PDF reporting on chronic disease categories across the state. This internship has also given me the opportunity to leverage the SAS coding skills I gained from UofL to high-level discussions with the KDPH data modernization group.
+
+Although biostatistics is my specialization, I've realized the statistical and machine learning techniques I've refined throughout graduate work can naturally be applied across a variety of different domains. This has motivated me to work towards a "full-stack" data analysis and data science coding skill set, which would arm me with industry technology expertise to bolster my foundation in statistics. Ultimately I want to spend my working days building sophisticated statistical and data analytics pipelines that deliver clear, targeted, and accurate insights for decision-makers, be it in biostatistics, business operations and forecasting, sports analytics, or some other intriguing field I have yet to discover.
+
+In sports analytics, I'm building a web-hosted dashboard for USL Championship soccer. The statistics and analytics dashboard will feature sophisticated, match-level data metrics sourced from the American Soccer Analysis API. Expected-goals, goals-added, and other metrics will feed a machine-learning match-prediction model, which will be a highlight of the site. Overall, this will be an intuitive, engaging dashboard environment and workbench where users can explore and dissect USLC soccer data for themselves.
+
+In operations and forecasting, I'm interpreting the M5 Forecasting Competition dataset to build a retail demand-forecasting pipeline for Walmart's store-item sales, aimed at quantifying what forecast error actually costs in overstock and stockout terms.
+
+These projects, along with others in earlier stages, will be staged in a portfolio on this website and on my GitHub. See the [Projects]({{ '/projects' | relative_url }}) page for full case studies, methods, and links to each project.
+
+I'm open to full-time roles, contract work, and collaborations in statistics, biostatistics, data science, public health analytics, operations, sports analytics, or supply chain and business intelligence. Reach out by [email](mailto:jjcoug8383@gmail.com), or find my code on [GitHub](https://github.com/jaycoug).
